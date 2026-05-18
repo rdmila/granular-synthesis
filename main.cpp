@@ -43,8 +43,15 @@ static void glfw_error_callback(int error, const char *description) {
   fprintf(stderr, "GLFW Error %d: %s\n", error, description);
 }
 
+const char *input_file;
+
 // Main code
-int main(int, char **) {
+int main(int argc, char **argv) {
+  if (argc < 2) {
+    puts("Please specify input file as the argument.");
+    return -1;
+  }
+  input_file = argv[1];
 
   glfwSetErrorCallback(glfw_error_callback);
 

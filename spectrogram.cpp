@@ -1,3 +1,4 @@
+#include "spectrogram.hpp"
 #include "ma_wrapper.hpp"
 #include "miniaudio.h"
 #include "sliding_dft.hpp"
@@ -92,7 +93,7 @@ template <typename coef_type, std::size_t dft_width>
 std::vector<std::array<coef_type, dft_width>> calc_spec_data() {
   SlidingDFT<coef_type, dft_width> dft;
 
-  MA::Decoder decoder("sample2.wav");
+  MA::Decoder decoder(input_file);
 
   ma_result result;
   ma_uint64 file_len_pcm;
