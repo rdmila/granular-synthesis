@@ -55,7 +55,7 @@ FetchContent_Declare(
   GIT_REPOSITORY https://github.com/ocornut/imgui.git 
   GIT_TAG v1.92.7
 )
-set(FETCHCONTENT_SOURCE_DIR_IMGUI "${CMAKE_SOURCE_DIR}/imgui")
+# set(FETCHCONTENT_SOURCE_DIR_IMGUI "${CMAKE_SOURCE_DIR}/imgui")
 FetchContent_MakeAvailable(ImGui)
 
 add_library(DearImGui
